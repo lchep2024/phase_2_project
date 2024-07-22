@@ -74,6 +74,8 @@ we check the data type of features in oure data set to get:
 <class 'pandas.core.frame.DataFrame'>
 
 RangeIndex: 21597 entries, 0 to 21596
+
+Data columns  (total 21 columns):
 # Table
 
 | Column         | Non-Null Count  | Dtype   |
@@ -99,33 +101,6 @@ RangeIndex: 21597 entries, 0 to 21596
 | long           | 21597 non-null  | float64 |
 | sqft_living15  | 21597 non-null  | int64   |
 | sqft_lot15     | 21597 non-null  | int64   |
-
-Data columns  (total 21 columns):
-
- #    Column         Non-Null Count  Dtype 
----  ------         --------------  -----  
-
- 0   id             21597 non-null  int64  
- 1   date           21597 non-null  object 
- 2   price          21597 non-null  float64
- 3   bedrooms       21597 non-null  int64  
- 4   bathrooms      21597 non-null  float64
- 5   sqft_living    21597 non-null  int64  
- 6   sqft_lot       21597 non-null  int64  
- 7   floors         21597 non-null  float64
- 8   waterfront     19221 non-null  object 
- 9   view           21534 non-null  object 
- 10  condition      21597 non-null  object 
- 11  grade          21597 non-null  object 
- 12  sqft_above     21597 non-null  int64  
- 13  sqft_basement  21597 non-null  object 
- 14  yr_built       21597 non-null  int64  
- 15  yr_renovated   17755 non-null  float64
- 16  zipcode        21597 non-null  int64  
- 17  lat            21597 non-null  float64
- 18  long           21597 non-null  float64
- 19  sqft_living15  21597 non-null  int64  
- 20  sqft_lot15     21597 non-null  int64  
 dtypes: float64(6), int64(9), object(6)
 memory usage: 3.5+ MB
 
