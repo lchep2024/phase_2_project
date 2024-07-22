@@ -116,7 +116,7 @@ grade: object (Should be split into the grade number, an integer, and the grade 
 
 sqft_basement: object (Should be converted to a float)
 
-![alt text](image-3.png)
+
 
 **Step 2:**
 Identifying and solving of null or missing values by prioritisation.
