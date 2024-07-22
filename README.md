@@ -850,4 +850,53 @@ sqft_living as the predictor (corr: 0.7019)
    (iii)reducing the imact of outliers: makinig the model less sensitive to outliers.
 
     (iv)improving the linearity between the variables
-    
+
+
+**Model Evaluation with Log Transformation**
+  **1.R-squared value:**
+
+The R-squared value of 0.463 indicates that approximately 46.3% of the variance in the log-transformed home prices can be explained by the square footage of the living area (sqft_living).
+
+This is slightly lower than the untransformed model, suggesting that while the log transformation addresses heteroscedasticity, it does not significantly improve the explanatory power.
+
+  **2.Mean Absolute Error (MAE):**
+
+The MAE of 0.313 (in log-transformed terms) The MAE of 0.313 indicates that, on average, the model's predictions of the log-transformed home prices are off by about 0.313.
+
+This error metric is in log terms and indicates improved accuracy when predicting the log-transformed prices.
+
+  **3.Coefficient for sqft_living:**
+
+The coefficient of 0.352 implies that for every 1% increase in the square footage of living space, the home price increases by approximately 0.352%, assuming all other factors remain constant. This indicates a positive relationship between the log-transformed variables.
+
+  **4.Intercept:**
+
+The intercept of 13.051 suggests the log-transformed baseline price when the square footage is zero. This value is more abstract due to the log transformation but indicates the base value of a home independent of its living space.
+
+Visualization of Model's Results
+
+  **1.The scatter plot**
+
+The scatter plot shows the relationship between the actual log-transformed house prices and the log-transformed square footage of living space, with the regression line indicating the model's predictions.
+
+The general upward trend confirms the positive relationship between the log-transformed variables
+
+  **2.Residual Plot:**
+
+The residuals appear to be more evenly distributed around the horizontal line at zero, indicating that the log transformation has helped address heteroscedasticity.
+
+There is still some variability, but the pattern is less pronounced compared to the untransformed model.
+
+**Conclusion**
+While the log transformation addresses heteroscedasticity and improves the distribution of residuals, it does not significantly enhance the explanatory power of the model.
+
+Additional features may be required to better capture the variability in home prices.
+
+
+   **Feature Selection**
+
+   First, we will start with features that have a positive correlation with price.
+
+   ![alt text](images/image-34.png)
+   ![alt text](images/image-35.png)
+   
