@@ -70,7 +70,9 @@ This includes adding needed columns through what we already have, checking and a
 
 **Step 1:**
 we check the data type of features in oure data set to get:
+
 <class 'pandas.core.frame.DataFrame'>
+
 RangeIndex: 21597 entries, 0 to 21596
 # Table
 
@@ -102,6 +104,7 @@ Data columns  (total 21 columns):
 
  #    Column         Non-Null Count  Dtype 
 ---  ------         --------------  -----  
+
  0   id             21597 non-null  int64  
  1   date           21597 non-null  object 
  2   price          21597 non-null  float64
@@ -129,19 +132,21 @@ memory usage: 3.5+ MB
 
 From observations,the following had to tranform to enable consistency in our data
 
-id - integer ( Should be a string)
+* 'id' - integer ( Should be a string)
 
-date - object (Should be datetime)
+* 'date' - object (Should be datetime)
 
-bathrooms - float64 (Should be integer, as there are no half bathrooms)
+* 'bathrooms' - float64 (Should be integer, as there are no half bathrooms)
 
-floors - float64 (Should be integer)
+* 'floors' - float64 (Should be integer)
 
-condition - object (Should be integer, An index from 1 to 5 on the condition of the house.)
+* 'condition' - object (Should be integer, An index from 1 to 5 on the condition of the house.)
 
-grade: object (Should be split into the grade number, an integer, and the grade comment, which is a string)
+* 'grade': object (Should be split into the grade number, an integer, and the grade comment, which is a string)
 
 sqft_basement: object (Should be converted to a float)
+
+
 
 **Step 2:**
 Identifying and solving of null or missing values by prioritisation.
