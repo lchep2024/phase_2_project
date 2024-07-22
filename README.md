@@ -69,51 +69,55 @@ In this section,we are to clean and prepare our data to make it as consistent an
 This includes adding needed columns through what we already have, checking and aligning the datatypes of our column,identifying and dropping duplicate values,identifying and solving of null or missing values by prioritisation
 
 **Step 1:**
-
 we check the data type of features in oure data set to get:
+
 <class 'pandas.core.frame.DataFrame'>
+
 RangeIndex: 21597 entries, 0 to 21596
+
 Data columns  (total 21 columns):
- |# |   Column   |      Non-Null | Count |  Dtype | 
----  ------         --------------  -----  
- 0   id             21597 non-null  int64  
- 1   date           21597 non-null  object 
- 2   price          21597 non-null  float64
- 3   bedrooms       21597 non-null  int64  
- 4   bathrooms      21597 non-null  float64
- 5   sqft_living    21597 non-null  int64  
- 6   sqft_lot       21597 non-null  int64  
- 7   floors         21597 non-null  float64
- 8   waterfront     19221 non-null  object 
- 9   view           21534 non-null  object 
- 10  condition      21597 non-null  object 
- 11  grade          21597 non-null  object 
- 12  sqft_above     21597 non-null  int64  
- 13  sqft_basement  21597 non-null  object 
- 14  yr_built       21597 non-null  int64  
- 15  yr_renovated   17755 non-null  float64
- 16  zipcode        21597 non-null  int64  
- 17  lat            21597 non-null  float64
- 18  long           21597 non-null  float64
- 19  sqft_living15  21597 non-null  int64  
- 20  sqft_lot15     21597 non-null  int64  
+# Table
+
+| Column         | Non-Null Count  | Dtype   |
+| -------------- | --------------- | ------- |
+| id             | 21597 non-null  | int64   |
+| date           | 21597 non-null  | object  |
+| price          | 21597 non-null  | float64 |
+| bedrooms       | 21597 non-null  | int64   |
+| bathrooms      | 21597 non-null  | float64 |
+| sqft_living    | 21597 non-null  | int64   |
+| sqft_lot       | 21597 non-null  | int64   |
+| floors         | 21597 non-null  | float64 |
+| waterfront     | 19221 non-null  | object  |
+| view           | 21534 non-null  | object  |
+| condition      | 21597 non-null  | object  |
+| grade          | 21597 non-null  | object  |
+| sqft_above     | 21597 non-null  | int64   |
+| sqft_basement  | 21597 non-null  | object  |
+| yr_built       | 21597 non-null  | int64   |
+| yr_renovated   | 17755 non-null  | float64 |
+| zipcode        | 21597 non-null  | int64   |
+| lat            | 21597 non-null  | float64 |
+| long           | 21597 non-null  | float64 |
+| sqft_living15  | 21597 non-null  | int64   |
+| sqft_lot15     | 21597 non-null  | int64   |
 dtypes: float64(6), int64(9), object(6)
 memory usage: 3.5+ MB
 
 
 From observations,the following had to tranform to enable consistency in our data
 
-id - integer ( Should be a string)
+* 'id' - integer ( Should be a string)
 
-date - object (Should be datetime)
+* 'date' - object (Should be datetime)
 
-bathrooms - float64 (Should be integer, as there are no half bathrooms)
+* 'bathrooms' - float64 (Should be integer, as there are no half bathrooms)
 
-floors - float64 (Should be integer)
+* 'floors' - float64 (Should be integer)
 
-condition - object (Should be integer, An index from 1 to 5 on the condition of the house.)
+* 'condition' - object (Should be integer, An index from 1 to 5 on the condition of the house.)
 
-grade: object (Should be split into the grade number, an integer, and the grade comment, which is a string)
+* 'grade': object (Should be split into the grade number, an integer, and the grade comment, which is a string)
 
 sqft_basement: object (Should be converted to a float)
 
@@ -123,23 +127,28 @@ sqft_basement: object (Should be converted to a float)
 Identifying and solving of null or missing values by prioritisation.
 
 **Missing Values Observations:**
- *waterfront has some missing values (11% of the data)
- *view has a few missing values (0.29% of the data)
- *sqft_basement has a few nissing values (2.1% of the data)
- *yr_renovated has many missing values (17.79% of the data).
- *Srategies for dealing with the missing values:
- *waterfront and waterfront_description (11%):
+
+ * waterfront has some missing values (11% of the data)
+
+ * view has a few missing values (0.29% of the data)
+
+ * sqft_basement has a few nissing values (2.1% of the data)
+
+ * yr_renovated has many missing values (17.79% of the data).
+
+ * Srategies for dealing with the missing values:
+
+ * waterfront and waterfront_description (11%):
 
 Since waterfront is a categorical variable, 
- *we can fill the missing values with the most frequent category: 'NO', which is 0
- *yr_renovated (17.79%):
-We can fill the missing values with 0.
-A value of 0 might indicate that the house was never renovated.
- *sqft_basement (2.1%)
-we can also fill in with the mode
+  * we can fill the missing values with the most frequent category: 'NO', which is 0
+ yr_renovated (17.79%):
+  * We can fill the missing values with 0.
+     A value of 0 might indicate that the house was never renovated.
+sqft_basement (2.1%)
+  * we can also fill in with the mode
 
 **Step 3**
-
 Check for duplicate values which in our case we do not have any.
 
 **Step 4**
@@ -155,6 +164,7 @@ We can consider creating:
 
 age_of_house: age = 2024 - yr_built
 renovation_age: renovation_age = 2024 - yr_renovated (if renovated, otherwise 0) and display the first 5 as shown below
+
 	   age_of_house	  renovation_age
 7316	  70	           0.0
 20586	  12	           0.0
@@ -166,7 +176,7 @@ renovation_age: renovation_age = 2024 - yr_renovated (if renovated, otherwise 0)
 **Summary statistics**
 Here are some key insights from the summary statistics of the dataset:
 
-Price:
+**1.Price:**
 
 The average price of the houses is approximately 
 367,557.
@@ -174,52 +184,52 @@ The average price of the houses is approximately
 Prices range from 
 7,700,000.
 
-Bedrooms and Bathrooms:
+**2.Bedrooms and Bathrooms:**
 
 Most houses have around 3-4 bedrooms, with a minimum of 1 and a maximum of 33.
 
 Bathrooms range from 0 to 8, with an average of around 2.
 
-Square Footage:
+**3.Square Footage:**
 
 The average living area is about 2,083 square feet, with a range from 370 to 13,540 square feet.
 
 Lot sizes vary significantly, with a mean of 15,128 square feet, ranging from 520 to 1,651,359 square feet.
 
-Floors:
+**4.Floors:**
 
 Houses typically have 1 to 2 floors, with a few exceptions having up to 4 floors.
 
-Waterfront:
+**5.Waterfront:**
 
 A small percentage of houses are on the waterfront (approximately 0.68%).
 
-View and Condition:
+**6.View and Condition:**
 
 The majority of houses do not have a notable view (average view score of 0.23 on a scale of 0-4).
 
 The overall condition is generally good, with most houses rated around 3-4 on a scale of 1-5.
 
-Grades:
+**7.Grades:**
 
 Houses are mostly rated between 5-6 in grade, with a few exceptional houses rated as high as 11 (Mansion).
 
-Age and Renovation:
+**8.Age and Renovation:**
 
 The average age of the houses is about 53 years, ranging from 9 to 124 years.
 
 Most houses have not been renovated (renovation age of 0), but among those renovated, the renovation age ranges up to 90 years.
 
-Age Distribution:
+**9.Age Distribution:**
 
 Most houses were built in the mid-20th century, with a median build year of 1975.
 
-Latitude and Longitude:
+**10.Latitude and Longitude:**
 
 The houses are distributed across various locations, with latitudes ranging from 47.1559 to 47.7776 and longitudes from -122.5190 to -121.3150.
 
 
-**##Univarriate Analysis**
+  **Univarriate Analysis**
 
 First we can have a look at the distribution of our numerical variables
 ![alt text](image-1.png)
@@ -353,7 +363,6 @@ Houses with 4000+ square feet represent the luxury market, with average prices i
 Now lets take a look at average prices of houses with and without a waterfront
 
 ![alt text](image-8.png)\
-![alt text](image-1.png)
 
 ![alt text](image-9.png)
 
@@ -362,7 +371,6 @@ Now lets take a look at average prices of houses with and without a waterfront
 Waterfront properties have a significantly higher average price compared to non-waterfront properties:
   *Waterfront: $1,674,470
   *Non-Waterfront: $534,170
-  ![alt text](image-2.png)
 **2.Property Count:**
 
 The number of waterfront properties is much lower compared to non-waterfront properties:
