@@ -73,7 +73,8 @@ This includes adding needed columns through what we already have, checking and a
 we check the data type of features in oure data set to get:
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 21597 entries, 0 to 21596
-Data columns (total 21 columns):
+Data columns  (total 21 columns):
+
  |# |   Column   |      Non-Null | Count |  Dtype | 
 ---  ------         --------------  -----  
  0   id             21597 non-null  int64  
