@@ -1195,7 +1195,7 @@ Here we will use statsmodels library since it provides a more detailed statistic
 
  **Coefficients**
 
-|            | coef  | std err |      t    | P>|t|  | [0.025  | 0.975] |
+            | coef  | std err |      t    | P>|t|  | [0.025  | 0.975] |
 |------------|-------|---------|-----------|------|----------|--------|
 | const      | 13.0510 | 0.002 | 5523.466 | 0.000 | 13.046 | 13.056 |
 | x1         | 0.2347 | 0.004  | 58.046   | 0.000 | 0.227  | 0.243  |
