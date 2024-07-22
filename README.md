@@ -683,29 +683,29 @@ These areas are characterized by their high property values, desirable locations
 
   Extract correlations with price and sort them in descending order
 
-(price             1.000000
- sqft_living       0.701295
- grade_numeric     0.666835
- sqft_above        0.604424
- sqft_living15     0.583792
- bathrooms         0.519198
- view              0.392787
- sqft_basement     0.321264
- bedrooms          0.309640
- lat               0.306439
- waterfront        0.264915
- floors            0.243406
- yr_renovated      0.118278
- sqft_lot          0.088789
- renovation_age    0.083563
- sqft_lot15        0.082045
- yr_built          0.051012
- condition         0.034219
- long              0.019826
- Name: price, dtype: float64,
- age_of_house   -0.051012
- zipcode        -0.051169
- Name: price, dtype: float64)
+| Column           | Correlation |
+|------------------|-------------|
+| price            | 1.000000    |
+| sqft_living      | 0.701295    |
+| grade_numeric    | 0.666835    |
+| sqft_above       | 0.604424    |
+| sqft_living15    | 0.583792    |
+| bathrooms        | 0.519198    |
+| view             | 0.392787    |
+| sqft_basement    | 0.321264    |
+| bedrooms         | 0.309640    |
+| lat              | 0.306439    |
+| waterfront       | 0.264915    |
+| floors           | 0.243406    |
+| yr_renovated     | 0.118278    |
+| sqft_lot         | 0.088789    |
+| renovation_age   | 0.083563    |
+| sqft_lot15       | 0.082045    |
+| yr_built         | 0.051012    |
+| condition        | 0.034219    |
+| long             | 0.019826    |
+| age_of_house     | -0.051012   |
+| zipcode          | -0.051169   |
 
  Select only positive correlations
 
@@ -725,26 +725,27 @@ These areas are characterized by their high property values, desirable locations
 
    **Checking for outliers**
 
-   	Number of Outliers
-price	1152
-bedrooms	518
-bathrooms	7675
-sqft_living	568
-sqft_lot	2406
-floors	7
-waterfront	146
-view	2104
-condition	28
-sqft_above	600
-sqft_basement	556
-yr_built	0
-yr_renovated	740
-zipcode	0
-lat	2
-long	252
-sqft_living15	503
-sqft_lot15	2174
-grade_numeric	1889
-age_of_house	0
-renovation_age	740
-decade_built	0
+   	 Column       | Number of Outliers |
+|-----------------|---------------------|
+| price           | 1152                |
+| bedrooms        | 518                 |
+| bathrooms       | 7675                |
+| sqft_living     | 568                 |
+| sqft_lot        | 2406                |
+| floors          | 7                   |
+| waterfront      | 146                 |
+| view            | 2104                |
+| condition       | 28                  |
+| sqft_above      | 600                 |
+| sqft_basement   | 556                 |
+| yr_built        | 0                   |
+| yr_renovated    | 740                 |
+| zipcode         | 0                   |
+| lat             | 2                   |
+| long            | 252                 |
+| sqft_living15   | 503                 |
+| sqft_lot15      | 2174                |
+| grade_numeric   | 1889                |
+| age_of_house    | 0                   |
+| renovation_age  | 740                 |
+| decade_built    | 0                   |
