@@ -145,7 +145,7 @@ Next step,we checked for the cardinality for each column and we can tell that we
 
 So lets sort the date in ascending order and delete the first sale entry and only keep the latest house sale and the results data has 21,420 rows and 23 columns from the earlier 21 columns and 21,597 rows.
 
-**##Feature Engineering**
+**Feature Engineering**
 
 We have already created the new columns, *grade_numeric*, *grade_description*, *condition_description*, *view_description*, and *waterfront_description* to help us with our analysis.
 
