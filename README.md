@@ -358,6 +358,7 @@ Now lets take a look at average prices of houses with and without a waterfront
 Waterfront properties have a significantly higher average price compared to non-waterfront properties:
   *Waterfront: $1,674,470
   *Non-Waterfront: $534,170
+  ![alt text](image-2.png)
 **2.Property Count:**
 
 The number of waterfront properties is much lower compared to non-waterfront properties:
