@@ -411,12 +411,13 @@ The number of waterfront properties is much lower compared to non-waterfront pro
   *Non-Waterfront: 21,274 houses
 
 
-  **Key Insights:**
-  ***Premium Value:** Waterfront properties command a much higher premium, reflecting their desirability and the limited supply.
+   **Key Insights:**
 
-  ***Market Segmentation:** The waterfront property segment is niche and significantly more valuable, making it a high-end market segment.
+  * **Premium Value:** Waterfront properties command a much higher premium, reflecting their desirability and the limited supply.
 
-  ***Investment Strategy:** For investors and developers, focusing on waterfront properties can yield higher returns, though the market is smaller.
+  * **Market Segmentation:** The waterfront property segment is niche and significantly more valuable, making it a high-end market segment.
+
+  * co**Investment Strategy:** For investors and developers, focusing on waterfront properties can yield higher returns, though the market is smaller.
 
 Now lets take a look at how the view influences prices of the homes
 
