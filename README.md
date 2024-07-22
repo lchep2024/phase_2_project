@@ -253,7 +253,7 @@ Most houses have between 1 and 3 bathrooms. The distribution shows a right skew 
 
 4.**Sqft_Living:**
 
-*The distribution is right-skewed, with most houses having less than 4000 sqft of living space.
+The distribution is right-skewed, with most houses having less than 4000 sqft of living space.
 
 5.**Sqft Lot:**
 
@@ -318,12 +318,17 @@ The distribution is right-skewed with most houses having a total square footage 
 
 
   **Bivarriate analysis**
+
 Here, we want to explore the relationships between variables, with the aim of uncovering impotrant insights.
 
 First lets take a look at how the average price of houses varies with the number of bedrooms
+
   (i)Calculate the average price for houses with different numbers of bedrooms
+
   (ii)Calculate the count of houses for each number of bedrooms to understand distribution
+
   (iii)Merge the average price and counts data
+  
   (iv)Plot the average price by number of bedrooms
 
   ![alt text](images/image-5.png)
