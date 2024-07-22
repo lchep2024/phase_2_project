@@ -74,17 +74,12 @@ we check the data type of features in oure data set to get:
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 21597 entries, 0 to 21596
 Data columns  (total 21 columns):
-
  |# |   Column   |      Non-Null | Count |  Dtype | 
 ---  ------         --------------  -----  
  0   id             21597 non-null  int64  
-
  1   date           21597 non-null  object 
-
  2   price          21597 non-null  float64
-
  3   bedrooms       21597 non-null  int64  
-
  4   bathrooms      21597 non-null  float64
  5   sqft_living    21597 non-null  int64  
  6   sqft_lot       21597 non-null  int64  
