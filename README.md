@@ -377,15 +377,16 @@ Next, we can look at how the prices differ according to different square footage
 
 
 Insights from prices of homes according to the square footage of the living area of the homes:
-   (i)Mainstream Market:
+
+   **(i)Mainstream Market:**
 
 The majority of houses are in the 1000-1999 and 2000-2999 square feet range, indicating this is the mainstream market segment.
 
-   (ii)Premium Segment:
+   **(ii)Premium Segment:**
 
 Houses with 3000-3999 square feet start to enter the premium segment with significantly higher average prices.
 
-  (iii)Luxury Market:
+  **(iii)Luxury Market:**
 
 Houses with 4000+ square feet represent the luxury market, with average prices increasing sharply.
 
@@ -393,7 +394,8 @@ Houses with 4000+ square feet represent the luxury market, with average prices i
 
 Now lets take a look at average prices of houses with and without a waterfront
 
-![alt text](images/image-8.png)\
+![alt text](images/image-8.png)
+
 
 ![alt text](images/image-9.png)
 
@@ -408,12 +410,13 @@ The number of waterfront properties is much lower compared to non-waterfront pro
   *Waterfront: 146 houses
   *Non-Waterfront: 21,274 houses
 
-**##Key Insights:**
+
+  **Key Insights:**
   ***Premium Value:** Waterfront properties command a much higher premium, reflecting their desirability and the limited supply.
 
-***Market Segmentation:** The waterfront property segment is niche and significantly more valuable, making it a high-end market segment.
+  ***Market Segmentation:** The waterfront property segment is niche and significantly more valuable, making it a high-end market segment.
 
-***Investment Strategy:** For investors and developers, focusing on waterfront properties can yield higher returns, though the market is smaller.
+  ***Investment Strategy:** For investors and developers, focusing on waterfront properties can yield higher returns, though the market is smaller.
 
 Now lets take a look at how the view influences prices of the homes
 
