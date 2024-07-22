@@ -349,7 +349,7 @@ Houses with 4000+ square feet represent the luxury market, with average prices i
 Now lets take a look at average prices of houses with and without a waterfront
 
 ![alt text](image-8.png)\
-![alt text](image.png)
+![alt text](image-1.png)
 
 ![alt text](image-9.png)
 
