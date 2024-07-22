@@ -1029,4 +1029,75 @@ Lets now create a model with the combined features and evaluate it
 ![alt text](images/image-36.png)
 ![alt text](images/image-37.png)
 
+  **Model Evaluation with Combined Features**
+**1.R-squared: 0.659**
 
+This indicates that approximately 65.9% of the variance in log-transformed house prices can be explained by the combined features.
+
+This is comparable to the previous multiple predictor model, indicating that the combined features retain explanatory power.
+
+**2.Mean Absolute Error (MAE): 0.244**
+
+This indicates that, on average, the model's predictions of log-transformed prices are off by about 0.244 log units.
+
+The MAE remains consistent with the previous model, indicating stable prediction accuracy.
+
+**3.Coefficients:**
+
+The coefficients for each feature indicate the change in the log-transformed house price for a one-unit change in the log-transformed feature, holding other factors constant.
+
+**4.Intercept: 13.051**
+
+This suggests that if all features were zero (which is not practically possible), the model would predict a baseline log-transformed price of 13.051.
+
+    **Visualization**
+
+* Predicted vs Actual Prices (Log):
+
+The points close to the red ideal line indicate good predictions.
+
+* Residual Plot: The residuals vs. predicted log-transformed prices are randomly distributed around zero, suggesting a well-fitted model.
+
+**Interpretation**
+
+Combining features has successfully reduced multicollinearity while maintaining the model's explanatory power and prediction accuracy.
+
+The model now has more interpretable and reliable coefficients, reducing redundancy.
+
+**Further feature selection**
+
+Now we want to determine the features that are most predictive.
+
+For this, we can use a combination of the Coefficients of the Linear Regression model and Recursive Feature Elimination (FRE, that recursively removes less important features).
+
+We already have the Coefficients of the Linear Regression model above
+
+Next we can do Recursive Feature Elimination (RFE) with Cross-Validation (CV). This method will help identify the most important features that contribute to the model's performance.
+
+Let's apply RFE with CV to select the best features:
+
+
+ Index | Feature             | Ranking    |
+|-------|---------------------|------------|
+| 1     | grade_numeric       | 1          |
+| 0     | combined_sqft       | 2          |
+| 11    | yr_built            | 3          |
+| 2     | sqft_living15       | 4          |
+| 3     | bathrooms           | 5          |
+| 4     | view                | 6          |
+| 10    | sqft_lot15          | 7          |
+| 6     | bedrooms            | 8          |
+| 5     | sqft_basement       | 9          |
+| 7     | floors              | 10         |
+| 12    | condition           | 11         |
+| 9     | sqft_lot            | 12         |
+| 8     | combined_renovation | 13  
+
+
+Above we have the Feature ranking using Recursive Feature Elimination. The features are ranked based on their importance to the model.
+
+Next we can select the top 10 features based on FRE ranking, train a linear regression model with the selected features and then evaluate the model using R-Squared and MAE to compare performance.
+
+![alt text](images/image-38.png)
+![alt text](images/image-39.png)
+![alt text](images/image-40.png)
