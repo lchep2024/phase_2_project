@@ -127,20 +127,26 @@ sqft_basement: object (Should be converted to a float)
 Identifying and solving of null or missing values by prioritisation.
 
 **Missing Values Observations:**
- *waterfront has some missing values (11% of the data)
- *view has a few missing values (0.29% of the data)
- *sqft_basement has a few nissing values (2.1% of the data)
- *yr_renovated has many missing values (17.79% of the data).
- *Srategies for dealing with the missing values:
- *waterfront and waterfront_description (11%):
+
+ * waterfront has some missing values (11% of the data)
+
+ * view has a few missing values (0.29% of the data)
+
+ * sqft_basement has a few nissing values (2.1% of the data)
+
+ * yr_renovated has many missing values (17.79% of the data).
+
+ * Srategies for dealing with the missing values:
+
+ * waterfront and waterfront_description (11%):
 
 Since waterfront is a categorical variable, 
- *we can fill the missing values with the most frequent category: 'NO', which is 0
- *yr_renovated (17.79%):
-We can fill the missing values with 0.
-A value of 0 might indicate that the house was never renovated.
- *sqft_basement (2.1%)
-we can also fill in with the mode
+  * we can fill the missing values with the most frequent category: 'NO', which is 0
+ yr_renovated (17.79%):
+  * We can fill the missing values with 0.
+     A value of 0 might indicate that the house was never renovated.
+sqft_basement (2.1%)
+  * we can also fill in with the mode
 
 **Step 3**
 Check for duplicate values which in our case we do not have any.
@@ -150,7 +156,7 @@ Next step,we checked for the cardinality for each column and we can tell that we
 
 So lets sort the date in ascending order and delete the first sale entry and only keep the latest house sale and the results data has 21,420 rows and 23 columns from the earlier 21 columns and 21,597 rows.
 
-**##Feature Engineering**
+**Feature Engineering**
 
 We have already created the new columns, *grade_numeric*, *grade_description*, *condition_description*, *view_description*, and *waterfront_description* to help us with our analysis.
 
@@ -158,6 +164,7 @@ We can consider creating:
 
 age_of_house: age = 2024 - yr_built
 renovation_age: renovation_age = 2024 - yr_renovated (if renovated, otherwise 0) and display the first 5 as shown below
+
 	   age_of_house	  renovation_age
 7316	  70	           0.0
 20586	  12	           0.0
@@ -166,10 +173,10 @@ renovation_age: renovation_age = 2024 - yr_renovated (if renovated, otherwise 0)
 9587	  73	           0.0
 
 
-**##Summary statistics**
+**Summary statistics**
 Here are some key insights from the summary statistics of the dataset:
 
-Price:
+**1.Price:**
 
 The average price of the houses is approximately 
 367,557.
@@ -177,52 +184,52 @@ The average price of the houses is approximately
 Prices range from 
 7,700,000.
 
-Bedrooms and Bathrooms:
+**2.Bedrooms and Bathrooms:**
 
 Most houses have around 3-4 bedrooms, with a minimum of 1 and a maximum of 33.
 
 Bathrooms range from 0 to 8, with an average of around 2.
 
-Square Footage:
+**3.Square Footage:**
 
 The average living area is about 2,083 square feet, with a range from 370 to 13,540 square feet.
 
 Lot sizes vary significantly, with a mean of 15,128 square feet, ranging from 520 to 1,651,359 square feet.
 
-Floors:
+**4.Floors:**
 
 Houses typically have 1 to 2 floors, with a few exceptions having up to 4 floors.
 
-Waterfront:
+**5.Waterfront:**
 
 A small percentage of houses are on the waterfront (approximately 0.68%).
 
-View and Condition:
+**6.View and Condition:**
 
 The majority of houses do not have a notable view (average view score of 0.23 on a scale of 0-4).
 
 The overall condition is generally good, with most houses rated around 3-4 on a scale of 1-5.
 
-Grades:
+**7.Grades:**
 
 Houses are mostly rated between 5-6 in grade, with a few exceptional houses rated as high as 11 (Mansion).
 
-Age and Renovation:
+**8.Age and Renovation:**
 
 The average age of the houses is about 53 years, ranging from 9 to 124 years.
 
 Most houses have not been renovated (renovation age of 0), but among those renovated, the renovation age ranges up to 90 years.
 
-Age Distribution:
+**9.Age Distribution:**
 
 Most houses were built in the mid-20th century, with a median build year of 1975.
 
-Latitude and Longitude:
+**10.Latitude and Longitude:**
 
 The houses are distributed across various locations, with latitudes ranging from 47.1559 to 47.7776 and longitudes from -122.5190 to -121.3150.
 
 
-**##Univarriate Analysis**
+  **Univarriate Analysis**
 
 First we can have a look at the distribution of our numerical variables
 ![alt text](image-1.png)
