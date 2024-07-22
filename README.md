@@ -1101,3 +1101,209 @@ Next we can select the top 10 features based on FRE ranking, train a linear regr
 ![alt text](images/image-38.png)
 ![alt text](images/image-39.png)
 ![alt text](images/image-40.png)
+
+**Model Evaluation with Top 10 Features**
+
+**1.R-squared: 0.656**
+
+  This indicates that approximately 65.6% of the variance in log-transformed house prices can be explained by the top 10 features.
+
+  This is comparable to the model with all features, suggesting that the top 10 features capture most of the explanatory power.
+
+**2.Mean Absolute Error (MAE): 0.245**
+
+  This indicates that, on average, the model's predictions of log-transformed prices are off by about 0.246 log units.
+
+  The MAE is consistent with the previous models, indicating stable prediction accuracy.
+
+**Interpretation**
+
+The model with the top 10 features maintains similar performance to the model with all features, indicating that these features are indeed the most predictive.
+
+**Conclusion**
+
+The Recursive Feature Elimination (RFE) method has successfully identified the most important features for predicting house prices.
+
+The selected top 10 features provide a simpler and interpretable model with comparable performance to the full model.
+
+**Model Validation**
+
+Next we can validate this model using k-fold cross validation.
+
+Here, the dataset is divided into k subsets (folds). The model is then trained on k-1 folds and tested on the remaining folds. The process is repeated k times, with each fold used as the test set once. the results are then averaged to provide a more reliable estimate of the model performance. We will compute the average R-Squared and MAE across all folds.
+
+This ensures model robustness and to ensure its generalisability.
+
+**Cross-Validation Results**
+
+Using 10-fold cross-validation, we obtain the following results for the model with the top 10 features:
+
+**1.Mean R-squared: 0.651**
+
+  This indicates that, on average, 65.1% of the variance in log-transformed house prices is explained by the model across all folds.
+
+  The standard deviation of 0.011 suggests that the model's performance is consistent across different subsets of the data.
+
+**2.Mean MAE: 0.244**
+
+This indicates that, on average, the model's predictions of log-transformed prices are off by about 0.244 log units across all folds.
+
+The standard deviation of 0.0024 suggests that the model's prediction accuracy is consistent across different subsets of the data.
+
+**Interpretation**
+
+  * The cross-validation results confirm that the model with the top 10 features performs well and consistently across different subsets of the data.
+
+  * The low standard deviations in both R-squared and MAE indicate that the model is not overfitting and generalizes well to unseen data.
+
+**Conclusion**
+
+The combination of feature selection using RFE and model evaluation using k-fold cross-validation has resulted in a robust and reliable model for predicting house prices.
+
+The top 10 features identified are essential predictors of house prices, and the model's performance is consistent and reliable.
+
+**Statistical Testing for p-values and Confidence interval**
+
+Now we want to perform hypothesis testing of the coefficients of our chosen predictors to see if they are statistically significant at an alpha level of 0.05.
+
+Also we want to generate confidence intervals that we can use in our recommendations.
+
+Here we will use statsmodels library since it provides a more detailed statistical summary compared to scikit-learn
+
+ **OLS Regression Results**
+
+ **Summary**
+
+|                        |                      |
+|------------------------|----------------------|
+| *Dep. Variable:*     | price                |
+| *R-squared:*         | 0.651                |
+| *Model:*             | OLS                  |
+| *Adj. R-squared:*    | 0.651                |
+| *Method:*            | Least Squares        |
+| *F-statistic:*       | 3190.                |
+| *Date:*              | Fri, 19 Jul 2024     |
+| *Prob (F-statistic):*| 0.00                 |
+| *Time:*              | 19:27:59             |
+| *Log-Likelihood:*    | -4201.6              |
+| *No. Observations:*  | 17136                |
+| *AIC:*               | 8425.                |
+| *Df Residuals:*      | 17125                |
+| *BIC:*               | 8510.                |
+| *Df Model:*          | 10                   |
+| *Covariance Type:*   | nonrobust            |
+
+ **Coefficients**
+
+|            | coef  | std err |      t    | P>|t|  | [0.025  | 0.975] |
+|------------|-------|---------|-----------|------|----------|--------|
+| const      | 13.0510 | 0.002 | 5523.466 | 0.000 | 13.046 | 13.056 |
+| x1         | 0.2347 | 0.004  | 58.046   | 0.000 | 0.227  | 0.243  |
+| x2         | 0.1397 | 0.006  | 25.004   | 0.000 | 0.129  | 0.151  |
+| x3         | -0.1696 | 0.003 | -58.512  | 0.000 | -0.175 | -0.164 |
+| x4         | 0.0885 | 0.004  | 22.732   | 0.000 | 0.081  | 0.096  |
+| x5         | 0.0498 | 0.004  | 13.847   | 0.000 | 0.043  | 0.057  |
+| x6         | 0.0489 | 0.003  | 19.214   | 0.000 | 0.044  | 0.054  |
+| x7         | -0.0391 | 0.003 | -13.518  | 0.000 | -0.045 | -0.033 |
+| x8         | -0.0436 | 0.003 | -13.678  | 0.000 | -0.050 | -0.037 |
+| x9         | 0.0519 | 0.003  | 18.377   | 0.000 | 0.046  | 0.057  |
+| x10        | 0.0377 | 0.003  | 11.699   | 0.000 | 0.031  | 0.044  |
+
+ **Additional Statistics**
+
+|                        |                      |
+|------------------------|----------------------|
+| *Omnibus:*           | 71.907               |
+| *Durbin-Watson:*     | 1.978                |
+| *Prob(Omnibus):*     | 0.000                |
+| *Jarque-Bera (JB):*  | 99.556               |
+| *Skew:*              | 0.002                |
+| *Prob(JB):*          | 2.41e-22             |
+| *Kurtosis:*          | 3.373                |
+| *Cond. No.:*         | 5.45                 |
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+**Interpretation of Results**
+
+  **1.P-values:**
+
+All coefficients have p-values of 0.000, indicating that they are statistically significant predictors of the target variable (log-transformed house prices).
+
+This means we can reject the null hypothesis that the coefficients are equal to zero at a significance level of 0.05.
+
+  **2.Confidence Intervals:**
+
+The 95% confidence intervals for the coefficients provide a range within which we can be 95% confident that the true coefficient value lies. Since the confidence intervals do not include zero, it reinforces the statistical significance of the coefficients.
+
+**Conclusion**
+The model summary indicates that all the top 10 features are significant predictors of house prices.
+
+Next we can calculate the dollar imapct of the key features using the coefficients and the confidence interval.
+
+Feature: grade_numeric
+  Dollar Impact: $127,174.88
+  95% Confidence Interval: [$123,002.54, $131,672.33]
+
+Feature: yr_built
+  Dollar Impact: $-91,899.70
+  95% Confidence Interval: [$-94,825.75, $-88,865.27]
+
+Feature: sqft_above
+  Dollar Impact: $47,954.74
+  95% Confidence Interval: [$43,890.78, $52,018.70]
+
+Feature: sqft_basement
+  Dollar Impact: $26,984.70
+  95% Confidence Interval: [$23,300.04, $30,886.10]
+
+Feature: sqft_living15
+  Dollar Impact: $26,497.02
+  95% Confidence Interval: [$23,841.90, $29,260.52]
+
+Feature: view
+  Dollar Impact: $-21,186.78
+  95% Confidence Interval: [$-24,383.76, $-17,881.43]
+
+Feature: bathrooms
+  Dollar Impact: $-23,625.16
+  95% Confidence Interval: [$-27,093.07, $-20,048.87]
+
+Feature: bedrooms
+  Dollar Impact: $28,122.61
+  95% Confidence Interval: [$24,925.63, $30,886.10]
+
+Feature: floors
+  Dollar Impact: $20,428.18
+  95% Confidence Interval: [$16,797.70, $23,841.90]
+
+Feature: combined_sqft
+  Dollar Impact: $75,698.04
+  95% Confidence Interval: [$69,900.12, $81,821.08]
+
+
+  **Recommendations From Our Regression Model**
+
+Based on the linear regression model's findings, we can give some data-driven recommendations for home renovations that might increase the estimated values of homes.
+
+The recommendations are based on the coefficients and confidence intervals of the significant features.
+
+**1. Grade of the House (grade_numeric):**
+
+**Improving the overall grade of the house**, which represents the construction quality and design, can significantly increase the home's value. Grade of the house has the highest positive impact on the estimated value.
+
+This can be achieved through high-quality renovations, modern designs, and premium materials.
+
+**Dollar Impact: $127,174.88**, indicating that improving the grade of the house by one unit can increase its value by approximately 
+123,002.54 to $131,672.33.
+
+**2. Year Built (yr_built):**
+While the year built cannot be changed, **focusing on modernizing older homes through renovations can mitigate the negative impact of an older construction date.**
+
+Emphasize updating essential systems like plumbing, electrical, and HVAC to meet current standards.
+
+**3. Increase Living Space:**
+Expanding the living area (sqft_living) or basement space (sqft_basement) can increase the home value.
+
+
