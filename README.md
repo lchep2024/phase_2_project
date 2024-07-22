@@ -725,7 +725,9 @@ These areas are characterized by their high property values, desirable locations
 
    **Checking for outliers**
 
-   	 Column          | Number of Outliers |
+We will identify  outliers using the IQR method
+
+| Column          | Number of Outliers |
 |-----------------|---------------------|
 | price           | 1152                |
 | bedrooms        | 518                 |
@@ -749,3 +751,11 @@ These areas are characterized by their high property values, desirable locations
 | age_of_house    | 0                   |
 | renovation_age  | 740                 |
 | decade_built    | 0                   |
+
+We will then visualizing the outliers using box plots
+
+![alt text](image/image.png)
+![alt text](image/image-1.png)
+![alt text](image/image-2.png)
+
+   **Simple Liner Regression Model**
