@@ -323,18 +323,19 @@ Here, we want to explore the relationships between variables, with the aim of un
 
 First lets take a look at how the average price of houses varies with the number of bedrooms
 
-  (i)Calculate the average price for houses with different numbers of bedrooms
+  (i)Calculate the average price for houses with different numbers of bedrooms.
 
-  (ii)Calculate the count of houses for each number of bedrooms to understand distribution
+  (ii)Calculate the count of houses for each number of bedrooms to understand distribution.
 
-  (iii)Merge the average price and counts data
-  
-  (iv)Plot the average price by number of bedrooms
+  (iii)Merge the average price and counts data.
+
+  (iv)Plot the average price by number of bedrooms.
 
   ![alt text](images/image-5.png)
   ![alt text](images/image-4.png)
 
   **Insights from the Average Price by Number of Bedrooms:**
+
 **1.Price Increase with Bedrooms:**
 
 There is a general trend where the average price of houses increases with the number of bedrooms. This is expected as larger houses with more bedrooms typically offer more living space and amenities.
@@ -344,6 +345,7 @@ There is a general trend where the average price of houses increases with the nu
 4 bedrooms: $636,318
 5 bedrooms: $789,629
 6 bedrooms: $839,755
+
 **2.Anomalies:**
 
 There is a noticeable jump in average price for houses with 7 and 8 bedrooms compared to those with 5 or 6 bedrooms
@@ -354,6 +356,7 @@ There are very few houses with 9 or more bedrooms, which may affect the reliabil
 10 bedrooms: $820,000 (3 houses)
 11 bedrooms: $520,000 (1 house)
 33 bedrooms: $640,000 (1 house)
+
 **3.Market Segmentation:**
 
 The bulk of houses are in the 2-4 bedroom range, representing a large segment of the market. They have moderate average prices and likely represent the middle-market segment, appealing to typical family units:
@@ -361,6 +364,7 @@ The bulk of houses are in the 2-4 bedroom range, representing a large segment of
 3 bedrooms: 9,731 houses
 4 bedrooms: 6,849 houses
 Houses with 5 or more bedrooms tend to have a higher average price, indicating they are more likely to be premium or luxury properties catering to larger families or high-net-worth individuals.
+
 **4.Diminishing Returns:**
 
 The increase in average price between houses with 1 and 2 bedrooms is significant, but the incremental increase diminishes slightly as the number of bedrooms increases beyond 4. This suggests a potential saturation point where adding more bedrooms does not proportionately increase the house price.
