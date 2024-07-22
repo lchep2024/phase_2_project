@@ -166,12 +166,13 @@ We can consider creating:
 age_of_house: age = 2024 - yr_built
 renovation_age: renovation_age = 2024 - yr_renovated (if renovated, otherwise 0) and display the first 5 as shown below
 
-	   age_of_house	  renovation_age
-7316	  70	           0.0
-20586	  12	           0.0
-1040	  48	           0.0
-20543	  15	           0.0
-9587	  73	           0.0
+| age_of_house | renovation_age |
+|--------------|----------------|
+| 70           | 0.0            |
+| 12           | 0.0            |
+| 48           | 0.0            |
+| 15           | 0.0            |
+| 73           | 0.0            |
 
 
 **Summary statistics**
@@ -339,30 +340,43 @@ First lets take a look at how the average price of houses varies with the number
 **1.Price Increase with Bedrooms:**
 
 There is a general trend where the average price of houses increases with the number of bedrooms. This is expected as larger houses with more bedrooms typically offer more living space and amenities.
-1 bedroom: $321,848
-2 bedrooms: $402,246
-3 bedrooms: $467,796
-4 bedrooms: $636,318
-5 bedrooms: $789,629
-6 bedrooms: $839,755
+| Bedrooms | Price        |
+|----------|--------------|
+| 1        | $321,848     |
+| 2        | $402,246     |
+| 3        | $467,796     |
+| 4        | $636,318     |
+| 5        | $789,629     |
+| 6        | $839,755     |
 
 **2.Anomalies:**
 
 There is a noticeable jump in average price for houses with 7 and 8 bedrooms compared to those with 5 or 6 bedrooms
-7 bedrooms: $951,448
-8 bedrooms: $1,105,077
+
+| Bedrooms | Price        |
+|----------|--------------|
+| 7        | $951,448     |
+| 8        | $1,105,077   |
+
 There are very few houses with 9 or more bedrooms, which may affect the reliability of the average price for these categories:
-9 bedrooms: $893,999 (6 houses)
-10 bedrooms: $820,000 (3 houses)
-11 bedrooms: $520,000 (1 house)
-33 bedrooms: $640,000 (1 house)
+
+| Bedrooms | Price         |
+|----------|---------------|
+| 9        | $893,999 (6 houses) |
+| 10       | $820,000 (3 houses) |
+| 11       | $520,000 (1 house)  |
+| 33       | $640,000 (1 house)  |
 
 **3.Market Segmentation:**
 
 The bulk of houses are in the 2-4 bedroom range, representing a large segment of the market. They have moderate average prices and likely represent the middle-market segment, appealing to typical family units:
-2 bedrooms: 2,736 houses
-3 bedrooms: 9,731 houses
-4 bedrooms: 6,849 houses
+
+| Bedrooms | Number of Houses |
+|----------|-------------------|
+| 2        | 2,736 houses      |
+| 3        | 9,731 houses      |
+| 4        | 6,849 houses      |
+
 Houses with 5 or more bedrooms tend to have a higher average price, indicating they are more likely to be premium or luxury properties catering to larger families or high-net-worth individuals.
 
 **4.Diminishing Returns:**
@@ -402,13 +416,18 @@ Now lets take a look at average prices of houses with and without a waterfront
    **1.Average Price:**
 
 Waterfront properties have a significantly higher average price compared to non-waterfront properties:
-  *Waterfront: $1,674,470
-  *Non-Waterfront: $534,170
+
+  * Waterfront: $1,674,470
+
+  * Non-Waterfront: $534,170
+
 **2.Property Count:**
 
 The number of waterfront properties is much lower compared to non-waterfront properties:
-  *Waterfront: 146 houses
-  *Non-Waterfront: 21,274 houses
+
+  * Waterfront: 146 houses
+
+  * Non-Waterfront: 21,274 houses
 
 
    **Key Insights:**
@@ -417,7 +436,7 @@ The number of waterfront properties is much lower compared to non-waterfront pro
 
   * **Market Segmentation:** The waterfront property segment is niche and significantly more valuable, making it a high-end market segment.
 
-  * co**Investment Strategy:** For investors and developers, focusing on waterfront properties can yield higher returns, though the market is smaller.
+  * **coInvestment Strategy:** For investors and developers, focusing on waterfront properties can yield higher returns, though the market is smaller.
 
 Now lets take a look at how the view influences prices of the homes
 
@@ -427,22 +446,35 @@ Now lets take a look at how the view influences prices of the homes
   **1.Average Price:**
 
 There is a clear trend where the quality of the view correlates with the average house price:
-  *None: $499,307
-  *Fair: $647,991
-  *Average: $728,486
-  *Good: $908,239
-  *Excellent: $1,363,011
+
+  * None: $499,307
+
+  * Fair: $647,991
+
+  * Average: $728,486
+
+  * Good: $908,239
+
+  * Excellent: $1,363,011
+
+
   **2.Property Count:**
 
 The majority of houses have no notable view, with decreasing counts as the view quality improves:
-  *None: 19,682 houses
-  *Fair: 963 houses
-  *Average: 511 houses
-  *Good: 513 houses
-  *Excellent: 257 houses
+
+  * None: 19,682 houses
+
+  * Fair: 963 houses
+
+  * Average: 511 houses
+
+  * Good: 513 houses
+
+  * Excellent: 257 houses
 
 
   **Key Insights:**
+
 * **Premium Value:** Houses with better views command significantly higher prices, with the highest average prices for houses with excellent views.
 
 * **Market Segmentation:** The majority of houses fall into the 'None' category, indicating that premium views are less common and therefore more valuable.
@@ -454,24 +486,36 @@ Now let's see the average price of every condition
 ![alt text](images/image-12.png)
 ![alt text](images/image-13.png)
 
-1.Average Price:
+**1.Average Price:**
 
 The average price increases with better house condition:
-  *Poor: $270,654
-  *Fair: $356,379
-  *Average: $532,948
-  *Good: $678,581
-  *Very Good: $741,739
-2.Property Count:
+
+  * Poor: $270,654
+
+  * Fair: $356,379
+
+  * Average: $532,948
+
+  * Good: $678,581
+
+  * Very Good: $741,739
+
+**2.Property Count:**
 
 Most houses are in average or good condition:
-  *Poor: 29 houses
-  *Fair: 170 houses
-  *Average: 14,020 houses
-  *Good: 5,677 houses
-  *Very Good: 1,701 houses
+
+  * Poor: 29 houses
+
+  * Fair: 170 houses
+
+  * Average: 14,020 houses
+
+  * Good: 5,677 houses
+
+  * Very Good: 1,701 houses
 
   **Key Insights:**
+
    *  **Premium Value:** There is a clear premium associated with houses in better condition. Investing in improving the condition of a property could significantly increase its market value.
 
   *  **Market Segmentation:** The majority of houses are in average or good condition, making up a significant part of the market.
@@ -481,11 +525,13 @@ Most houses are in average or good condition:
 
   Now lets take a look at how the grade description relates with price
 
-  ![alt text](images/image-14.png)
+  ![alt text](images/image-14.png) 
+
 
   ![alt text](images/image-15.png)
 
   **Key Insights:**
+
 Premium Value: Houses with higher grades command significantly higher prices.
 
   *  **Market Segmentation:** The majority of houses are in the 'Average' and 'Good' categories, representing a large segment of the market. Higher grades are less common but command higher prices.
@@ -501,27 +547,30 @@ We will group the houses into decades to avoid too many unique values.
 ![alt text](images/image-17.png)
 
 **Key Insights:**
-  1.Historical Value:
+
+  **1.Historical Value:**
 
 Houses built in the early 20th century (1900-1930) have relatively high average prices.
 
 This might be due to their historical value, architectural styles, or location.
 
-  2.Mid-20th Century:
+  **2.Mid-20th Century:**
 
 Houses built between 1940 and 1960 show a dip in average prices.
-  3.Modern Era:
+
+  **3.Modern Era:**
 
 Starting from the 1970s, there is a gradual increase in average prices.
 
 This trend continues into the 2000s and 2010s, reflecting modern construction techniques, better amenities, and potentially higher demand for newer houses.
 
-  4.Recent Construction:
+  **4.Recent Construction:**
 
 The most recent decade (2010s) shows the highest average prices, indicating that newer constructions are more expensive, possibly due to higher construction costs, better facilities, and modern designs.
 
 
 Now let's calculate the average price for each zip code
+
 ![alt text](images/image-18.png)
 
 ![alt text](images/image-19.png)
@@ -533,88 +582,104 @@ From this, lets try and find out zip codes that have low counts of houses (defin
 
 From Google Search, we could find out the areas in King County that are represented by these zip codes.
 
-   *98005: This zip code covers parts of Bellevue, WA.
+   * 98005: This zip code covers parts of Bellevue, WA.
 
-   *98039: This zip code is associated with Medina, WA.
+   * 98039: This zip code is associated with Medina, WA.
 
-   *98077: This zip code covers parts of Woodinville, WA.
+   * 98077: This zip code covers parts of Woodinville, WA.
 
-   *98102: This zip code includes parts of Capitol Hill and Eastlake in Seattle, WA.
+   * 98102: This zip code includes parts of Capitol Hill and Eastlake in Seattle, WA.
 
-   *98109: This zip code covers South Lake Union and parts of Queen Anne in Seattle, WA.
+   * 98109: This zip code covers South Lake Union and parts of Queen Anne in Seattle, WA.
 
-   *98119: This zip code includes parts of Queen Anne, specifically the northern part, in Seattle, WA.
+   * 98119: This zip code includes parts of Queen Anne, specifically the northern part, in Seattle, WA.
 
 
 These areas are characterized by their high property values, desirable locations, and quality of life, making them some of the most sought-after neighborhoods in King County. This could explain the high pricing of houses.
 
 **Calculating the correlation matrix**
 
-1.Price:
+**1.Price:**
 
-  *Highly correlated with sqft_living (0.701917), grade_numeric (0.667951), and total_square_footage (0.668185).
+  * Highly correlated with sqft_living (0.701917), grade_numeric (0.667951), and total_square_footage (0.668185).
 
-  *Moderately correlated with bathrooms (0.519628), sqft_above (0.605368), and sqft_living15 (0.585241).
+  * Moderately correlated with bathrooms (0.519628), sqft_above (0.605368), and sqft_living15 (0.585241).
 
-2.Bedrooms:
+**2.Bedrooms:**
 
-  *Moderately correlated with sqft_living (0.578212), total_square_footage (0.562662), and sqft_above (0.479386).
-3.Bathrooms:
+  * Moderately correlated with sqft_living (0.578212), total_square_footage (0.562662), and sqft_above (0.479386).
 
-  *Highly correlated with sqft_living (0.702719) and total_square_footage (0.671770).
-4.Sqft Living:
+**3.Bathrooms:**
 
-  *Very highly correlated with total_square_footage (0.941166).
+  * Highly correlated with sqft_living (0.702719) and total_square_footage (0.671770).
 
-  *Highly correlated with sqft_above (0.876448) and bathrooms (0.702719).
+**4.Sqft Living:**
 
-5.Floors:
+  * Very highly correlated with total_square_footage (0.941166).
 
-   *Shows some correlation with price (0.244832) and bathrooms (0.327893).
-6.Waterfront:
+  * Highly correlated with sqft_above (0.876448) and bathrooms (0.702719).
 
-  *Moderately correlated with price (0.264306) and view (0.393497).
-7.View:
+**5.Floors:**
 
-  *Moderately correlated with price (0.393497) and sqft_living (0.281715).
-8.Condition:
+   * Shows some correlation with price (0.244832) and bathrooms (0.327893).
 
-  *Shows low correlation with most features.
-9.Sqft Above:
+**6.Waterfront:**
 
-  *Very highly correlated with sqft_living (0.876448).
-10.Sqft Basement:
+  * Moderately correlated with price (0.264306) and view (0.393497).
 
-  *Moderately correlated with price (0.321108) and total_square_footage (0.708763).
-11.Yr Built:
+**7.View:**
 
-  *Shows low correlation with most features.
-12.Yr Renovated:
+  * Moderately correlated with price (0.393497) and sqft_living (0.281715).
 
-  *Shows some correlation with price (0.117855).
-13.Sqft Living15:
+**8.Condition:**
 
-  *Highly correlated with sqft_living (0.756402) and total_square_footage (0.665161).
-14.Sqft Lot15:
+  * Shows low correlation with most features.
 
-  *Highly correlated with sqft_lot (0.718204).
-15.Grade Numeric:
+**9.Sqft Above:**
 
-  *Highly correlated with price (0.667951) and sqft_living (0.762779).
-16.Age of House:
+  * Very highly correlated with sqft_living (0.876448).
 
-  *Negatively correlated with price (-0.053953) and grade_numeric (-0.199762).
-17Renovation Age:
+**10.Sqft Basement:**
 
-  *Shows low correlation with most features.
+  * Moderately correlated with price (0.321108) and total_square_footage (0.708763).
 
-  **##Visualizing The Correlation Matrix**
+**11.Yr Built:**
+
+  * Shows low correlation with most features.
+
+**12.Yr Renovated:**
+
+  * Shows some correlation with price (0.117855).
+
+**13.Sqft Living15:**
+
+  * Highly correlated with sqft_living (0.756402) and total_square_footage (0.665161).
+
+**14.Sqft Lot15:**
+
+  * Highly correlated with sqft_lot (0.718204).
+
+**15.Grade Numeric:**
+
+  * Highly correlated with price (0.667951) and sqft_living (0.762779).
+
+**16.Age of House:**
+
+  * Negatively correlated with price (-0.053953) and grade_numeric (-0.199762).
+
+**17Renovation Age:**
+
+  * Shows low correlation with most features.
+
+
+
+       **Visualizing The Correlation Matrix**
 
   ![alt text](images/image-21.png)
 
   Since price is our target variable, lets see how our variables relate with price.
 
-  **##Calculating correlation of columns with price**
+  **Calculating correlation of columns with price**
 
   Extract correlations with price and sort them in descending order
 
@@ -656,3 +721,30 @@ These areas are characterized by their high property values, desirable locations
  ![alt text](images/image-25.png)
  ![alt text](images/image-26.png)
  ![alt text](images/image-27.png)
+
+
+   **Checking for outliers**
+
+   	Number of Outliers
+price	1152
+bedrooms	518
+bathrooms	7675
+sqft_living	568
+sqft_lot	2406
+floors	7
+waterfront	146
+view	2104
+condition	28
+sqft_above	600
+sqft_basement	556
+yr_built	0
+yr_renovated	740
+zipcode	0
+lat	2
+long	252
+sqft_living15	503
+sqft_lot15	2174
+grade_numeric	1889
+age_of_house	0
+renovation_age	740
+decade_built	0
