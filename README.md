@@ -69,7 +69,6 @@ In this section,we are to clean and prepare our data to make it as consistent an
 This includes adding needed columns through what we already have, checking and aligning the datatypes of our column,identifying and dropping duplicate values,identifying and solving of null or missing values by prioritisation
 
 **Step 1:**
-
 we check the data type of features in oure data set to get:
 
 <class 'pandas.core.frame.DataFrame'>
@@ -77,9 +76,7 @@ we check the data type of features in oure data set to get:
 RangeIndex: 21597 entries, 0 to 21596
 
 Data columns  (total 21 columns):
-
- |# |   Column   |      Non-Null | Count |  Dtype |
-
+ |# |   Column   |      Non-Null | Count |  Dtype | 
 ---  ------         --------------  -----  
 
  0   id             21597 non-null  int64  
@@ -121,7 +118,7 @@ From observations,the following had to tranform to enable consistency in our dat
 
 * 'grade': object (Should be split into the grade number, an integer, and the grade comment, which is a string)
 
-* 'sqft_basement': object (Should be converted to a float)
+sqft_basement: object (Should be converted to a float)
 
 
 
@@ -145,7 +142,6 @@ A value of 0 might indicate that the house was never renovated.
 we can also fill in with the mode
 
 **Step 3**
-
 Check for duplicate values which in our case we do not have any.
 
 **Step 4**
@@ -153,7 +149,7 @@ Next step,we checked for the cardinality for each column and we can tell that we
 
 So lets sort the date in ascending order and delete the first sale entry and only keep the latest house sale and the results data has 21,420 rows and 23 columns from the earlier 21 columns and 21,597 rows.
 
-**Feature Engineering**
+**##Feature Engineering**
 
 We have already created the new columns, *grade_numeric*, *grade_description*, *condition_description*, *view_description*, and *waterfront_description* to help us with our analysis.
 
@@ -169,7 +165,7 @@ renovation_age: renovation_age = 2024 - yr_renovated (if renovated, otherwise 0)
 9587	  73	           0.0
 
 
-**Summary statistics**
+**##Summary statistics**
 Here are some key insights from the summary statistics of the dataset:
 
 Price:
@@ -359,7 +355,6 @@ Houses with 4000+ square feet represent the luxury market, with average prices i
 Now lets take a look at average prices of houses with and without a waterfront
 
 ![alt text](image-8.png)\
-![alt text](image-1.png)
 
 ![alt text](image-9.png)
 
@@ -368,7 +363,6 @@ Now lets take a look at average prices of houses with and without a waterfront
 Waterfront properties have a significantly higher average price compared to non-waterfront properties:
   *Waterfront: $1,674,470
   *Non-Waterfront: $534,170
-  ![alt text](image-2.png)
 **2.Property Count:**
 
 The number of waterfront properties is much lower compared to non-waterfront properties:
