@@ -232,7 +232,7 @@ The houses are distributed across various locations, with latitudes ranging from
   **Univarriate Analysis**
 
 First we can have a look at the distribution of our numerical variables
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 ![alt text](image-2.png)
 
 Observations
