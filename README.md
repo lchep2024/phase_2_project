@@ -304,8 +304,8 @@ First lets take a look at how the average price of houses varies with the number
   (iii)Merge the average price and counts data
   (iv)Plot the average price by number of bedrooms
 
-  ![alt text](image-5.png)
-  ![alt text](image-4.png)
+  ![alt text](images/image-5.png)
+  ![alt text](images/image-4.png)
 
   **Insights from the Average Price by Number of Bedrooms:**
 **1.Price Increase with Bedrooms:**
@@ -340,9 +340,9 @@ The increase in average price between houses with 1 and 2 bedrooms is significan
 
 Next, we can look at how the prices differ according to different square footages of living spaces.
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 
 Insights from prices of homes according to the square footage of the living area of the homes:
@@ -362,9 +362,9 @@ Houses with 4000+ square feet represent the luxury market, with average prices i
 
 Now lets take a look at average prices of houses with and without a waterfront
 
-![alt text](image-8.png)\
+![alt text](images/image-8.png)\
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
    **1.Average Price:**
 
@@ -386,8 +386,8 @@ The number of waterfront properties is much lower compared to non-waterfront pro
 
 Now lets take a look at how the view influences prices of the homes
 
-![alt text](image-10.png)
-![alt text](image-11.png)
+![alt text](images/image-10.png)
+![alt text](images/image-11.png)
 
   **1.Average Price:**
 
@@ -416,8 +416,8 @@ The majority of houses have no notable view, with decreasing counts as the view 
 
 Now let's see the average price of every condition
 
-![alt text](image-12.png)
-![alt text](image-13.png)
+![alt text](images/image-12.png)
+![alt text](images/image-13.png)
 
 1.Average Price:
 
@@ -446,9 +446,9 @@ Most houses are in average or good condition:
 
   Now lets take a look at how the grade description relates with price
 
-  ![alt text](image-14.png)
+  ![alt text](images/image-14.png)
 
-  ![alt text](image-15.png)
+  ![alt text](images/image-15.png)
 
   **Key Insights:**
 Premium Value: Houses with higher grades command significantly higher prices.
@@ -461,9 +461,9 @@ Now lets take a closer look at the yr_built vs price
 
 We will group the houses into decades to avoid too many unique values.
 
-![alt text](image-16.png)
+![alt text](images/image-16.png)
 
-![alt text](image-17.png)
+![alt text](images/image-17.png)
 
 **Key Insights:**
   1.Historical Value:
@@ -487,13 +487,13 @@ The most recent decade (2010s) shows the highest average prices, indicating that
 
 
 Now let's calculate the average price for each zip code
-![alt text](image-18.png)
+![alt text](images/image-18.png)
 
-![alt text](image-19.png)
+![alt text](images/image-19.png)
 
 From this, lets try and find out zip codes that have low counts of houses (defined by lower than the first quartile) and high house prices (defined by higher than the third quartile)
 
-![alt text](image-20.png)
+![alt text](images/image-20.png)
 
 
 From Google Search, we could find out the areas in King County that are represented by these zip codes.
@@ -575,7 +575,7 @@ These areas are characterized by their high property values, desirable locations
 
   **##Visualizing The Correlation Matrix**
 
-  ![alt text](image-21.png)
+  ![alt text](images/image-21.png)
 
   Since price is our target variable, lets see how our variables relate with price.
 
@@ -609,15 +609,15 @@ These areas are characterized by their high property values, desirable locations
 
  Select only positive correlations
 
- ![alt text](image-22.png)
+ ![alt text](images/image-22.png)
 
  select only negative correlations
 
- ![alt text](image-23.png)
+ ![alt text](images/image-23.png)
 
  **##Visualizing the correlations with price**
 
- ![alt text](image-24.png)
- ![alt text](image-25.png)
- ![alt text](image-26.png)
- ![alt text](image-27.png)
+ ![alt text](images/image-24.png)
+ ![alt text](images/image-25.png)
+ ![alt text](images/image-26.png)
+ ![alt text](images/image-27.png)
