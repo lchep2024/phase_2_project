@@ -725,7 +725,7 @@ These areas are characterized by their high property values, desirable locations
 
    **Checking for outliers**
 
-   	 Column       | Number of Outliers |
+   	 Column          | Number of Outliers |
 |-----------------|---------------------|
 | price           | 1152                |
 | bedrooms        | 518                 |
