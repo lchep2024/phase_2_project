@@ -899,4 +899,134 @@ Additional features may be required to better capture the variability in home pr
 
    ![alt text](images/image-34.png)
    ![alt text](images/image-35.png)
-   
+
+   **Interpretation**
+
+**1.R-squared (R²): 0.6596** (Explains 65.96% of our varriance) This is higher than the simple model that we had.
+
+**2.Mean Absolute Error (MAE): 0.2436** (lower absolute error)
+
+**3.Coefficients:** The coefficients indicate the strength and direction of the relationship between each feature and the log-transformed price. Positive coefficients suggest a positive relationship, while negative coefficients indicate a negative relationship.
+
+  * sqft_living: 0.4959
+
+  * total_square_footage: -0.3344
+
+  * grade_numeric: 0.2320
+
+  * sqft_above: -0.0552
+
+  * sqft_living15: 0.0903
+
+  * bathrooms: 0.0451
+
+  * view: 0.0484
+
+  * sqft_basement: 0.0904
+
+  * bedrooms: -0.0450
+
+  * floors: 0.0382
+
+  * yr_renovated: 0.0646
+
+  * sqft_lot: -0.0139
+
+  * renovation_age: -0.0580
+
+  * sqft_lot15: -0.0280
+
+  * yr_built: -0.1590
+
+  * condition: 0.0240
+
+**4.Intercept: 13.0510**
+
+*8Visualizations:**
+
+* Predicted vs Actual Log of House Price:
+
+   * Most points are close to the red line, indicating a good fit.
+
+* Residual Plot:
+
+   * This plot shows the residuals (errors) plotted against the predicted log of house prices.
+   * The red horizontal line represents zero residuals.
+   * The residuals are fairly evenly distributed around the horizontal line, suggesting that there is no clear pattern and that the model's assumptions are reasonably met.
+
+These visualizations help in understanding the performance and reliability of the model.
+
+   **Analysing this model**
+
+We have a better performing model, with a higher R-squared and a lower MAE
+
+In this model, we have used all features that are positively correlated to price.
+
+However, this use of multiple predictors makes our model more complex, and susceptible to multicollinearity, if our varriables are highly correlated with each other.
+
+  **Checking for multicollinearity**
+
+| Index | Variable         | VIF        |
+|-------|------------------|------------|
+| 9     | yr_renovated     | 36.996825  |
+| 11    | renovation_age   | 36.861120  |
+| 0     | sqft_living      | 23.461489  |
+| 2     | sqft_above       | 22.618018  |
+| 10    | sqft_lot         | 6.816759   |
+| 12    | sqft_lot15       | 6.578868   |
+| 6     | sqft_basement    | 5.580468   |
+| 1     | grade_numeric    | 2.958845   |
+| 3     | sqft_living15    | 2.734187   |
+| 4     | bathrooms        | 2.358188   |
+| 8     | floors           | 2.028104   |
+| 7     | bedrooms         | 1.856394   |
+| 13    | yr_built         | 1.796322   |
+| 14    | condition        | 1.220764   |
+| 5     | view             | 1.164441   |
+
+
+**High VIF Values:**
+ 
+  * We have some highly collinear features.
+
+  * Features such as sqft_living, sqft_above, yr_renovated, and renovation_age have extremely high VIF values (generally, **a VIF above 10 indicates significant multicollinearity).**
+
+  * This suggests that these features are highly correlated with each other, which can lead to instability in the regression coefficients.
+
+**Next steps**
+
+  1.Combine yr_renovated and renovation_age.
+
+  2.combine sqft_living and sqft_above.
+
+  3.Recalculate VIF to check for improvements.
+
+ 
+| Index | Variable             | VIF        |
+|-------|----------------------|------------|
+| 9     | sqft_lot             | 6.812999   |
+| 10    | sqft_lot15           | 6.578895   |
+| 0     | combined_sqft        | 5.821039   |
+| 1     | grade_numeric        | 2.938702   |
+| 2     | sqft_living15        | 2.732199   |
+| 3     | bathrooms            | 2.354732   |
+| 7     | floors               | 1.924100   |
+| 6     | bedrooms             | 1.826551   |
+| 11    | yr_built             | 1.796286   |
+| 5     | sqft_basement        | 1.434084   |
+| 12    | condition            | 1.208609   |
+| 4     | view                 | 1.163005   |
+| 8     | combined_renovation  | 1.104436   |
+
+  **Interpretation**
+
+Our features now have acceptable VIF values, suggesting minimal multicollinearity.
+
+**Next Steps**
+
+Lets now create a model with the combined features and evaluate it
+
+![alt text](images/image-36.png)
+![alt text](images/image-37.png)
+
+
