@@ -64,7 +64,8 @@ Now to go into more detail on the columns we have. We will use the `column_names
 * `sqft_living15` - The square footage of interior housing living space for the nearest 15 neighbors
 * `sqft_lot15` - The square footage of the land lots of the nearest 15 neighbors
 
-**##Data Preparation and Cleaning**
+**Data Preparation and Cleaning**
+
 In this section,we are to clean and prepare our data to make it as consistent and useful as possible by using python's libraries frameworks.
 This includes adding needed columns through what we already have, checking and aligning the datatypes of our column,identifying and dropping duplicate values,identifying and solving of null or missing values by prioritisation
 
@@ -119,7 +120,7 @@ From observations,the following had to tranform to enable consistency in our dat
 
 * 'grade': object (Should be split into the grade number, an integer, and the grade comment, which is a string)
 
-sqft_basement: object (Should be converted to a float)
+* 'sqft_basement': object (Should be converted to a float)
 
 
 
@@ -174,6 +175,7 @@ renovation_age: renovation_age = 2024 - yr_renovated (if renovated, otherwise 0)
 
 
 **Summary statistics**
+
 Here are some key insights from the summary statistics of the dataset:
 
 **1.Price:**
@@ -235,16 +237,20 @@ First we can have a look at the distribution of our numerical variables
 ![alt text](images/image-1.png)
 ![alt text](images/image-2.png)
 
-Observations
+Observations:
+
 1.**Price:**
 
 The distribution is right-skewed, indicating that most houses are priced below $1 million, with a few very high-priced properties.
+
 2.**Bedrooms:**
 
 Most houses have 3 to 4 bedrooms. There are few houses with more than 6 bedrooms, and very few with exceptionally high bedroom counts.
+
 3.**Bathrooms:**
 
 Most houses have between 1 and 3 bathrooms. The distribution shows a right skew with fewer houses having more than 4 bathrooms.
+
 4.**Sqft_Living:**
 
 *The distribution is right-skewed, with most houses having less than 4000 sqft of living space.
@@ -252,50 +258,66 @@ Most houses have between 1 and 3 bathrooms. The distribution shows a right skew 
 5.**Sqft Lot:**
 
 The distribution is heavily right-skewed with most houses having lot sizes less than 15,000 sqft. There are a few outliers with very large lot sizes.
+
 6.**Floors:**
 
 Most houses have either 1 or 2 floors, with very few having 3 or more floors.
+
 7.**Waterfront:**
 
 The distribution indicates that a very small number of houses are on the waterfront.
+
 8.**View:**
 
 The majority of houses have a view rating of 0 (none). Other view ratings (1 to 4) are much less common.
+
 9.**Condition:**
 
 Most houses have a condition rating of 3 (Average) or 4 (Good), with fewer houses rated as 1 (Poor) or 5 (Very Good).
+
 10.**Sqft Above:**
 
 The distribution is right-skewed, similar to sqft_living, indicating that most houses have less than 3000 sqft above ground.
+
 11.**Sqft Basement:**
 
 Most houses either have no basement or have a basement size less than 1500 sqft. The distribution shows a sharp drop-off after that.
+
 12.**Yr Built:**
 
 The distribution is relatively uniform with peaks around the 1950s and 2000s, indicating periods of increased construction.
+
 13.**Yr Renovated:**
 
 Most houses have a renovation year of 0 (indicating no renovation). For those that have been renovated, the distribution shows peaks in more recent years.
+
 14.**Sqft Living15:**
 
 The distribution is right-skewed, with most houses having neighboring houses with less than 4000 sqft of living space.
+
 15.**Sqft Lot15:**
 
 The distribution is heavily right-skewed with most houses having neighboring lot sizes less than 20,000 sqft, but some have much larger neighboring lot sizes.
+
 16.**Grade Numeric:**
 
 Most houses have a grade between 5 (Average) and 7 (Good). Higher grades are less common.
+
 17.**Age of House:**
 
 The distribution indicates that many houses are between 20 to 80 years old, with fewer houses being either very new or very old.
+
 18.**Renovation Age:**
 
 Most houses either have a renovation age of 0 or were renovated in the past 20 years. There are fewer houses with renovations older than that.
+
 19.**Total Square Footage:**
 
 The distribution is right-skewed with most houses having a total square footage (living + basement) of less than 4000 sqft.
 
-**##Bivarriate analysis**
+
+
+  **Bivarriate analysis**
 Here, we want to explore the relationships between variables, with the aim of uncovering impotrant insights.
 
 First lets take a look at how the average price of houses varies with the number of bedrooms
