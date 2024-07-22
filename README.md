@@ -752,10 +752,102 @@ We will identify  outliers using the IQR method
 | renovation_age  | 740                 |
 | decade_built    | 0                   |
 
-We will then visualizing the outliers using box plots
+We will then visualize the outliers using box plots
 
-![alt text](image/image.png)
-![alt text](image/image-1.png)
-![alt text](image/image-2.png)
+![alt text](images/image-31.png)
 
    **Simple Liner Regression Model**
+
+For our first simple regression model, we will use sqft_living, since it showed the highest correlation.
+
+sqft_living as the predictor (corr: 0.7019)
+
+   **Model evaluation**
+
+* R-squared value: 0.485
+
+* Mean Absolute Error (MAE): 175,360.87
+
+* Coefficient for sqft_living: 259,509.06
+
+* Intercept: 541,250.32
+
+**Interpretation**
+
+**1.R-squared value:**
+
+  * The R-squared value of 0.485 indicates that **approximately 48.5% of the variance in home prices can be explained by the square footage of the living area** (sqft_living).
+
+  * This suggests that while sqft_living is an important factor, more features are needed to better explain the variability in home prices.
+
+**2.Mean Absolute Error (MAE):**
+
+  * The MAE of 175,360.87 indicates that, **on average, the model's predictions are off by about $175,360.**
+
+  * This is a significant error, highlighting that relying solely on sqft_living to predict home prices may lead to considerable inaccuracies.
+
+**3.Coefficient for sqft_living:**
+
+  * The coefficient of 259,509.06 implies that **for every additional square foot of living space, the home price increases by approximately $259,509**, *assuming all other factors remain constant.*
+
+  * This large coefficient indicates a strong positive relationship between living space and home price.
+
+**4.Intercept:**
+
+  * The intercept of 541,250.32 suggests that if a house had zero square feet of living space (which is not practically possible), the model would predict a baseline price of $541,250.
+
+  * This intercept represents the base value of a home, independent of its living space.
+
+
+
+  **Visualization of this model's results**
+
+  ![alt text](images/image-32.png)
+
+
+* The blue points represent the actual prices, and the red line represents the regression line obtained from our linear regression model.
+
+* The scatter plot shows a general upward trend, indicating that as the square footage of living space increases, the house prices tend to increase.
+
+* The regression line captures this trend, showing a positive relationship between square footage and house price. However, there is considerable scatter around the regression line, indicating variability in house prices that is not captured by sqft_living alone.
+
+* This further supports the need for additional features to improve the model's predictive power.
+
+
+**Plotting the residuals**
+
+![alt text](images/image-33.png)
+ 
+ **Observations:**
+
+**1.Random Distribution Around Zero:** 
+
+ The residuals appear to be randomly distributed around the horizontal line at zero.
+
+ This indicates that the model does not exhibit systematic errors and the linear relationship is a reasonable approximation for the data.
+
+**2.Variance of Residuals:**
+
+ The spread of residuals increases with larger values of sqft_living, suggesting heteroscedasticity (non-constant variance of residuals).
+
+  This means the model's prediction errors increase with larger homes.
+
+**3.Potential Outliers:**
+
+  There are some points with large residuals, indicating potential outliers where the model's predictions significantly deviate from the actual values.
+
+
+**Now lets try log transormation to address heteroscedestacity**
+
+* we can apply a log transformation to both the dependent variable (house prices) and the predictor (sqft_living)
+
+* This would help in improving the model by:
+
+   (i)handling the skewewd data: both the price and sqft_living are right skewed as shown earlier. Log transformation normalizes both variables.
+
+   (ii)reducing heteroscedasticity: stabilizing the varriance of residuals, resulting in more reliable models.
+
+   (iii)reducing the imact of outliers: makinig the model less sensitive to outliers.
+
+    (iv)improving the linearity between the variables
+    
